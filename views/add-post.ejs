@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Course | <%= title %></title>
+    <link rel="stylesheet" href="/add-post.css">
+    
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="container">
+        <div class="post">
+            <form id="form-info" method="post" action="/add-post">
+                <div class="post-title">
+                    <div>
+                        <h3>Post Title</h3>
+                        <input type="text" name="title">
+                    </div>
+                    <div>
+                        <h3>Author</h3>
+                        <input type="text" name="author">
+                    </div>
+                </div>
+                <div class="post-body">
+                    <h3>Post Text</h3>
+                    <textarea name="text" cols="100" rows="10"></textarea>
+                    <button>SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

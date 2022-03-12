@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Course | <%= title %>
+    </title>
+    <link rel="stylesheet" href="/contacts.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+        <div class="container">
+            <div class="container-header">Contacts:</div>
+            <div class="container-body">
+                <% if(contacts.length) { %>
+                    <% contacts.forEach(({link, name})=> { %>
+                        <div><a href="<%= link %>">
+                                <%= name %>
+                            </a></div>
+                        <% }) %>
+                            <% } %>
+            </div>
+        </div>
+</body>
+
+</html>
